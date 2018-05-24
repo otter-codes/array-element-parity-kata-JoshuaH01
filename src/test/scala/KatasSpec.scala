@@ -4,10 +4,21 @@ class KatasSpec extends WordSpec with MustMatchers {
 
   "ArrayElementParity" must {
 
-    "When called must take a list of int and return a single int" in {
+    "When called must take a list of one int and return a single int" in {
       Katas.arrayelementparity(List(1)) mustEqual 1
     }
 
-  }
+    "When called must take a list of multiple ints and return a single int" in {
+      Katas.arrayelementparity(List(1,2)) mustEqual 3
+    }
 
+    "When called must take a list of multiple ints and return the correct answer" in {
+      Katas.arrayelementparity(List(1, -1, 2, -2, 3)) mustEqual 3
+    }
+
+    "When called must take a list of multiple ints and return the correct answer" in {
+      Katas.arrayelementparity(List(-3, 1, 2, 3, -1, -4, -2)) mustEqual -4
+    }
+
+  }
 }
