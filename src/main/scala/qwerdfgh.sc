@@ -13,3 +13,8 @@ def arrayelementparity3(numbers: List[Int]) : Int = {
   numbers.sum
 }
 arrayelementparity2(List(1, -1, 2, -2, 3))
+
+val x = List(1,1,2,2,3,4,5)
+val y = x.distinct
+val z = x diff y
+(y diff z).sum
